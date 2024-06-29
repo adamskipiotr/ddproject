@@ -50,11 +50,11 @@ sonar {
 		property "sonar.organization", "adamskipiotr"
 		property "sonar.host.url", "https://sonarcloud.io"
 	}
-}
 
-jacocoTestReport {
-	reports {
-		xml.enabled true
+	jacocoTestReport {
+		reports {
+			xml.enabled true
+		}
 	}
 }
 
