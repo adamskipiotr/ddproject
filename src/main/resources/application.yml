@@ -10,8 +10,8 @@ spring:
     show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/ddproject
-    username: postgres
-    password: postgres
+#    username: postgres
+#    password: postgres
   flyway:
     baseline-on-migrate: true
   graphql:
