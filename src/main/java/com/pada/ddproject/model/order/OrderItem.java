@@ -8,4 +8,9 @@ class OrderItem {
     private String name;
     private BigDecimal price;
     private Integer quantity;
+
+
+    public String returnHelloStirng(){
+        return "hello";
+    }
 }
