@@ -2,6 +2,7 @@ package com.pada.ddproject.model.order;
 
 import java.time.LocalDateTime;
 
+@SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
 class ShippingDetail {
     private String address;
     private String city;

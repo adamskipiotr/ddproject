@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
 public class Order {
     private String orderId;
     private Buyer buyer; // external aggregate root call

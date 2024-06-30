@@ -8,11 +8,4 @@ class OrderItem {
     private String name;
     private BigDecimal price;
     private Integer quantity;
-
-
-    public String returnHelloStirng(){
-        System.out.println("HIII");
-        System.out.println("Hello");
-        return "hello";
-    }
 }
