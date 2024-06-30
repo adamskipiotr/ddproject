@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.buyer;
+package com.pada.ddproject.domain.model.buyer;
 
 import java.util.List;
 

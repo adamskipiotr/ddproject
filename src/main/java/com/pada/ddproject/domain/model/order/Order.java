@@ -1,7 +1,7 @@
-package com.pada.ddproject.model.order;
+package com.pada.ddproject.domain.model.order;
 
-import com.pada.ddproject.model.buyer.Buyer;
-import com.pada.ddproject.model.seller.Seller;
+import com.pada.ddproject.domain.model.buyer.Buyer;
+import com.pada.ddproject.domain.model.seller.Seller;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

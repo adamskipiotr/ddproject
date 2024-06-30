@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.order;
+package com.pada.ddproject.domain.model.order;
 
 import java.math.BigDecimal;
 

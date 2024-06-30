@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.seller;
+package com.pada.ddproject.domain.model.seller;
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
 class SellerStatistics {

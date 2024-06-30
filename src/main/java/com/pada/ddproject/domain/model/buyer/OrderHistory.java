@@ -1,6 +1,6 @@
-package com.pada.ddproject.model.buyer;
+package com.pada.ddproject.domain.model.buyer;
 
-import com.pada.ddproject.model.order.Order;
+import com.pada.ddproject.domain.model.order.Order;
 
 import java.util.List;
 

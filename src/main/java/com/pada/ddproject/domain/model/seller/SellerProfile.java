@@ -1,7 +1,7 @@
-package com.pada.ddproject.model.buyer;
+package com.pada.ddproject.domain.model.seller;
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
-class BuyerProfile {
+class SellerProfile {
     private String name;
     private String email;
     private String phoneNumber;

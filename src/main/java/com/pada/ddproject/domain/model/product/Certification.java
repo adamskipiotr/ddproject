@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.product;
+package com.pada.ddproject.domain.model.product;
 
 import java.time.LocalDateTime;
 

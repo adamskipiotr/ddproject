@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.product;
+package com.pada.ddproject.domain.model.product;
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
 public class Variation { // Variation vs OrderItem?

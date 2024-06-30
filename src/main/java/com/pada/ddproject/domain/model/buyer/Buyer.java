@@ -1,4 +1,4 @@
-package com.pada.ddproject.model.buyer;
+package com.pada.ddproject.domain.model.buyer;
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
 public class Buyer {
