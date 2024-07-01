@@ -13,11 +13,11 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Testcontainers
 @DirtiesContext
-@ContextConfiguration(initializers = LearnprojectApplicationTests.TestEnvInitializer.class)
+@ContextConfiguration(initializers = DdProjectApplicationTestsSetup.TestEnvInitializer.class)
 @TestPropertySource(properties = {
     "spring.datasource.driver-class-name="
 })
-public class LearnprojectApplicationTests {
+public class DdProjectApplicationTestsSetup {
 
     @Container
     private static final PostgreSQLContainer<?> POSTGRES_DB = new PostgreSQLContainer<>("postgres:12.8")
