@@ -24,6 +24,9 @@ repositories {
 }
 
 dependencies {
+	// https://mvnrepository.com/artifact/org.testcontainers/testcontainers
+	testImplementation 'org.testcontainers:testcontainers:1.19.8'
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-graphql'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -33,12 +36,27 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql:42.5.4'
 
 	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'org.springframework.graphql:spring-graphql-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
+	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+	testImplementation 'org.springframework:spring-webflux:6.0.6'
+	testImplementation 'org.springframework.graphql:spring-graphql-test:1.2.0'
+	testImplementation 'org.testcontainers:junit-jupiter:1.17.6'
+	// https://mvnrepository.com/artifact/org.testcontainers/testcontainers
+	testImplementation group: 'org.testcontainers', name: 'testcontainers', version: '1.18.3'
+	// https://mvnrepository.com/artifact/org.springframework/spring-aop
+	implementation group: 'org.springframework', name: 'spring-aop', version: '6.0.10'
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+	runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
+	// https://mvnrepository.com/artifact/org.testcontainers/postgresql
+	testImplementation group: 'org.testcontainers', name: 'postgresql', version: '1.18.3'
 }
 
 tasks.named('test') {
