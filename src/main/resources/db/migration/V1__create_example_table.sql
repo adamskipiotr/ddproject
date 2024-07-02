@@ -1,0 +1,6 @@
+CREATE SEQUENCE buyer_id_seq START 1000 INCREMENT 1;
+
+CREATE TABLE IF NOT EXISTS buyer
+(
+    id  BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('buyer_id_seq')
+);
