@@ -5,14 +5,14 @@ import lombok.*;
 
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
-//@Entity
+@Entity
 @Getter
 @Setter
 @Builder
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "buyer")
+@Table(name = "buyer")
 public class BuyerEntity {
 
   //  @Id
