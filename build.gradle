@@ -38,8 +38,9 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.graphql-java-kickstart/playground-spring-boot-starter
 	runtimeOnly group: 'com.graphql-java-kickstart', name: 'playground-spring-boot-starter', version: '5.10.0'
 
-	// https://mvnrepository.com/artifact/org.flywaydb/flyway-core
-	implementation group: 'org.flywaydb', name: 'flyway-core', version: '9.19.3'
+// https://mvnrepository.com/artifact/org.flywaydb/flyway-database-postgresql
+	runtimeOnly 'org.flywaydb:flyway-database-postgresql:10.15.2'
+
 
 	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.1.0'
