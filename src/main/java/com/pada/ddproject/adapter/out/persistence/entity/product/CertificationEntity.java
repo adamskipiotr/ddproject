@@ -19,7 +19,7 @@ class CertificationEntity {
     @Id
     @SequenceGenerator(name = "certification_id_sequence", sequenceName = "certification_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "certification_id_sequence")
-    private Long certificationId;
+    private Long id;
 
     private String issuer;
 

@@ -1,9 +1,25 @@
 package com.pada.ddproject.adapter.out.persistence.entity.order;
 
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.time.LocalDateTime;
 
 @SuppressWarnings("java:S1068") // Suppress warning about unused private fields until logic is implemented
+@Entity
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "shipping_detail")
 class ShippingDetailEntity {
+    @Id
+    @SequenceGenerator(name = "shipping_detail_id_sequence", sequenceName = "shipping_detail_id_seq", allocationSize = 10)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "shipping_detail_id_sequence")
+    private Long id;
+
     private String address;
     private String city;
     private String state;

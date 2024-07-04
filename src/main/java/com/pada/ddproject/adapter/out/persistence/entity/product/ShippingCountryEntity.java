@@ -17,7 +17,7 @@ public class ShippingCountryEntity {
     @Id
     @SequenceGenerator(name = "shipping_country_id_sequence", sequenceName = "shipping_country_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "shipping_country_id_sequence")
-    private Long currencyId;
+    private Long id;
 
     private String name;
 

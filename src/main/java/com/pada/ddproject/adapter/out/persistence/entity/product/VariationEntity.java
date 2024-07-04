@@ -16,7 +16,7 @@ public class VariationEntity { // Variation vs OrderItem?
     @Id
     @SequenceGenerator(name = "variation_id_sequence", sequenceName = "variation_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "variation_id_sequence")
-    private Long variationId;
+    private Long id;
 
     private String size;
 

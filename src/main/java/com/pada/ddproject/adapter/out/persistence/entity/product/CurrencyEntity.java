@@ -20,7 +20,7 @@ public class CurrencyEntity {
     @Id
     @SequenceGenerator(name = "currency_id_sequence", sequenceName = "currency_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "currency_id_sequence")
-    private Long currencyId;
+    private Long id;
 
     private String name;
 

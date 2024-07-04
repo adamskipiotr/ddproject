@@ -20,7 +20,7 @@ public class ProductCatalogEntity {
     @Id
     @SequenceGenerator(name = "shipping_country_id_sequence", sequenceName = "shipping_country_id_seq", allocationSize = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "shipping_country_id_sequence")
-    private Long catalogId;
+    private Long id;
 
     @OneToMany(mappedBy = "productCatalog", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, orphanRemoval = true)
