@@ -1,55 +1,38 @@
-CREATE TYPE order_status as ENUM ('PENDING','CONFIRMED','SHIPPED', 'DELIVERED', 'CANCELLED', 'RETURNED');
 
-CREATE SEQUENCE product_catalog_id_seq START 1000 INCREMENT 1;
-CREATE SEQUENCE product_id_seq START 1000 INCREMENT 1;
-CREATE SEQUENCE variation_id_seq START 1000 INCREMENT 1;
-CREATE SEQUENCE shipping_country_id_seq START 1000 INCREMENT 1;
-CREATE SEQUENCE certification_id_seq START 1000 INCREMENT 1;
-CREATE SEQUENCE currency_id_seq START 1000 INCREMENT 1;
+CREATE SEQUENCE buyer_id_seq START 1000 INCREMENT 1;
+CREATE SEQUENCE buyer_profile_id_seq START 1000 INCREMENT 1;
+CREATE SEQUENCE order_history_id_seq START 1000 INCREMENT 1;
+CREATE SEQUENCE search_preference_id_seq START 1000 INCREMENT 1;
 
-
-CREATE TABLE IF NOT EXISTS product_catalog
+CREATE TABLE IF NOT EXISTS buyer
 (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('product_catalog_id_seq'),
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('buyer_id_seq')
 );
 
-CREATE TABLE IF NOT EXISTS product
+CREATE TABLE IF NOT EXISTS buyer_profile
 (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('product_id_seq'),
-    title VARCHAR(255),
-    description VARCHAR(255),
-    brand VARCHAR(255),
-    category VARCHAR(255)
-    isGlobalListing BOOLEAN,
-);
-
-CREATE TABLE IF NOT EXISTS variation
-(
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('variation_id_seq'),
-    'size' VARCHAR(255),
-    color VARCHAR(255),
-    material VARCHAR(255),
-    sku VARCHAR(255),
-    price DOUBLE,
-    inventoryQuantity INTEGER
-);
-
-CREATE TABLE IF NOT EXISTS shipping_country
-(
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('shipping_country_id_seq'),
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('buyer_profile_id_seq'),
     name VARCHAR(255),
+    email VARCHAR(255),
+    phone_number VARCHAR(255),
+    address VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS certification
+CREATE TABLE IF NOT EXISTS buyer_order_history
 (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('certification_id_seq'),
-    issuer VARCHAR(255),
-    certificationDate DATE,
-    validDate DATE
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('order_history_id_seq')
 );
 
-CREATE TABLE IF NOT EXISTS currency
+CREATE TABLE IF NOT EXISTS search_preference
 (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('currency_id_seq'),
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('search_preference_id_seq'),
     name VARCHAR(255),
+    eco_friendly_filter_enabled BOOLEAN
+);
+
+CREATE TABLE IF NOT EXISTS preferences (
+    search_preference_id BIGINT NOT NULL,
+    value VARCHAR(255),
+    PRIMARY KEY (search_preference_id, value),
+    FOREIGN KEY (search_preference_id) REFERENCES search_preference(id)
 );

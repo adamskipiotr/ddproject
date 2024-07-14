@@ -15,13 +15,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "currency")
-public class CurrencyEntity {
+public class CurrencyEntity implements Comparable<CurrencyEntity> { // develop into Value Object
 
     @Id
-    @SequenceGenerator(name = "currency_id_sequence", sequenceName = "currency_id_seq", allocationSize = 10)
+    @SequenceGenerator(name = "currency_id_sequence", sequenceName = "currency_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "currency_id_sequence")
     private Long id;
 
     private String name;
 
+    @Override
+    public int compareTo(CurrencyEntity o) {
+        return name.compareTo(o.getName());
+    }
 }

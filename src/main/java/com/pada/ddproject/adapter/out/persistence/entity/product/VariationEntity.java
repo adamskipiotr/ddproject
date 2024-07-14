@@ -14,7 +14,7 @@ import lombok.*;
 @Table(name = "variation")
 public class VariationEntity { // Variation vs OrderItem?
     @Id
-    @SequenceGenerator(name = "variation_id_sequence", sequenceName = "variation_id_seq", allocationSize = 10)
+    @SequenceGenerator(name = "variation_id_sequence", sequenceName = "variation_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "variation_id_sequence")
     private Long id;
 
@@ -29,4 +29,9 @@ public class VariationEntity { // Variation vs OrderItem?
     private Double price; // Double vs BigDecimal
 
    private Integer inventoryQuantity;
+
+    //Good practice - bidirectional ManyToOne
+    //https://medium.com/@rajibrath20/the-best-way-to-map-a-onetomany-relationship-with-jpa-and-hibernate-dbbf6dba00d3
+    @ManyToOne(fetch = FetchType.LAZY)
+    private ProductEntity product;
 }

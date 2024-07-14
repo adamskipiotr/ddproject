@@ -14,11 +14,14 @@ import lombok.*;
 @Table(name = "seller")
 public class SellerEntity {
 
-    @SequenceGenerator(name = "seller_id_sequence", sequenceName = "seller_id_seq", allocationSize = 10)
+    @Id
+    @SequenceGenerator(name = "seller_id_sequence", sequenceName = "seller_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seller_id_sequence")
-    private String id;
+    private Long id;
 
-    private SellerProfileEntity profile;
-
-    private SellerStatisticsEntity statistics;
+//    @OneToOne(mappedBy = "seller", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private SellerProfileEntity profile;
+//
+//    @OneToOne(mappedBy = "seller", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private SellerStatisticsEntity statistics;
 }

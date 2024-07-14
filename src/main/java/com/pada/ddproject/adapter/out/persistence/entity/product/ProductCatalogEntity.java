@@ -18,8 +18,8 @@ import java.util.List;
 public class ProductCatalogEntity {
 
     @Id
-    @SequenceGenerator(name = "shipping_country_id_sequence", sequenceName = "shipping_country_id_seq", allocationSize = 10)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "shipping_country_id_sequence")
+    @SequenceGenerator(name = "product_catalog_id_sequence", sequenceName = "product_catalog_id_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_catalog_id_sequence")
     private Long id;
 
     @OneToMany(mappedBy = "productCatalog", cascade = CascadeType.ALL,
